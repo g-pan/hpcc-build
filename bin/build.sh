@@ -10,8 +10,10 @@ echo "OS $distro"
 # Setup base build environment
 ${ROOTDIR}/distros/${distro}.sh
 
-# Setup plugin build environment
-
-# Setup Document build environment
 
 # Build
+if [ -n ${INPUT_BUILD_CATEGORY} ]
+then
+  cd ${ROOTDIR}/builds/${INPUT_BUILD_CATEGORY}
+  ./build.sh
+fi 
