@@ -1,0 +1,22 @@
+name: 'Build HPCC Project'
+description: 'Build one of HPCC Project: platform, clienttools, docs and plugins'
+inputs:
+  platform_branch:
+    description: 'HPCC Platform branch or tag'
+    required: false
+  github_user:
+    description: "github user. The default is hpcc-systems"
+    required: false
+  build_category:
+    description: 'One of HPCC Project: platform, clienttools, docs and plugins'
+    required: true
+
+outputs:
+  result:
+    description: "Build succeed or failed"
+
+runs:
+  using: "composite"
+  steps:
+    - run: bin/main.sh
+      shell: bash

@@ -1,0 +1,17 @@
+# File: .github/workflows/build-docs.yml
+
+on: 
+  push:
+    branches:
+      - "master"
+name: Build-Documentation
+
+jobs:
+
+  build-docs:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Build
+        uses: ./ 
+        with:
+          build_category: docs
