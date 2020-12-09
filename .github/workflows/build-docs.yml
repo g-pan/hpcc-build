@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - "master"
+
 name: Build-Documentation
 
 jobs:
-
-  build-docs:
+  build:
+    name: build-docs
     runs-on: ubuntu-18.04
     steps:
       - name: Build
