@@ -9,9 +9,12 @@ name: Build-Documentation
 
 jobs:
   build:
+    
     name: build-docs
     runs-on: ubuntu-18.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Build
         uses: ./ 
         with:
