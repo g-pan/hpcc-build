@@ -1,13 +1,13 @@
 name: 'Build HPCC Project'
 description: 'Build one of HPCC Project: platform, clienttools, docs and plugins'
 inputs:
-  platformBranch:
+  platform_branch:
     description: 'HPCC Platform branch or tag'
     required: false
-  githubUser:
+  github_user:
     description: 'github user. The default is hpcc-systems'
     required: false
-  buildCategory:
+  build_category:
     description: 'One of HPCC Project: platform, clienttools, docs and plugins'
     required: true
 
@@ -18,7 +18,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "INPUT ${INPUT_BUILDCATEGORY}"
+    - run: echo "INPUT ${INPUT_BUILD_CATEGORY}"
       shell: bash
     - run: bin/main.sh
       shell: bash
