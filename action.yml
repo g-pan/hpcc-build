@@ -20,3 +20,7 @@ runs:
       shell: bash
     - run: bin/main.sh
       shell: bash
+      env:
+        INPUT_BUILD_CATEGORY: ${{inputs.build_category}}
+        INPUT_GITHUB_USER: ${{inputs.github_user}}
+        INPUT_PLATFORM_BRANCH: ${{inputs.platform_branch}}
