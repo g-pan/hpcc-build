@@ -5,15 +5,18 @@ inputs:
     description: 'HPCC Platform branch or tag'
     required: false
   github_user:
-    description: 'github user. The default is hpcc-systems'
+    description: 'github user'
+    required: true
+    default: 'hpcc-systems'
   build_category:
     description: 'One of HPCC Project: platform, clienttools, docs and plugins'
     required: true
+    default: 'docs'
 
 runs:
   using: "composite"
   steps:
-    - run: env
+    - run: echo "INPUT $INPUT_BUILD_CATEGORY"
       shell: bash
     - run: bin/main.sh
       shell: bash
