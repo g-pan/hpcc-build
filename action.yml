@@ -5,7 +5,7 @@ inputs:
     description: 'HPCC Platform branch or tag'
     required: false
   github_user:
-    description: "github user. The default is hpcc-systems"
+    description: 'github user. The default is hpcc-systems'
     required: false
   build_category:
     description: 'One of HPCC Project: platform, clienttools, docs and plugins'
@@ -13,10 +13,9 @@ inputs:
 
 outputs:
   result:
-    description: "Build succeed or failed"
+    description: 'Build succeed or failed'
 
 runs:
-  using: "composite"
   steps:
     - run: echo "INPUT ${INPUT_BUILD_CATEGORY}"
       shell: bash
