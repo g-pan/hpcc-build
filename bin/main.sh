@@ -6,6 +6,5 @@ if [ $? -eq 0 ] # Windows
 then
    powershell ${BINDIR}/build.ps1
 else  # Unix
-   echo "test"
-   #${BINDIR}/build.sh
+   ${BINDIR}/build.sh
 fi
