@@ -18,4 +18,4 @@ jobs:
       - name: Build
         uses: ./ 
         with:
-          build_category: docs
+          buildCategory: docs
