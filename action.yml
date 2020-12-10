@@ -11,10 +11,6 @@ inputs:
     description: 'One of HPCC Project: platform, clienttools, docs and plugins'
     required: true
 
-outputs:
-  result:
-    description: 'Build succeed or failed'
-
 runs:
   using: "composite"
   steps:
