@@ -13,7 +13,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "INPUT ${INPUT_BUILD_CATEGORY}"
+    - run: env
       shell: bash
     - run: bin/main.sh
       shell: bash
