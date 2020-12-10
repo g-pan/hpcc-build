@@ -17,4 +17,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Build
         uses: ./ 
-        
+        with:
+          build_category: docs

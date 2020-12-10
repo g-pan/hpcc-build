@@ -6,7 +6,6 @@ inputs:
     required: false
   github_user:
     description: 'github user. The default is hpcc-systems'
-    required: false
   build_category:
     description: 'One of HPCC Project: platform, clienttools, docs and plugins'
     required: true
