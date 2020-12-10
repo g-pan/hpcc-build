@@ -16,9 +16,9 @@ outputs:
     description: 'Build succeed or failed'
 
 runs:
+  using: "composite"
   steps:
     - run: echo "INPUT ${INPUT_BUILD_CATEGORY}"
       shell: bash
-
     - run: bin/main.sh
       shell: bash
