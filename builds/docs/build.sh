@@ -19,4 +19,6 @@ cd ../ &&  mkdir -p build  && cd build
 cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release -DMAKE_DOCS_ONLY=ON \
   -DUSE_NATIVE_LIBRARIES=ON  -DDOCS_AUTO=ON -DDOC_LANGS=ALL ../HPCC-Platform
 
+make -j4
+
 
