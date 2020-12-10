@@ -16,7 +16,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo "INPUT $INPUT_BUILD_CATEGORY"
+    - run: echo "INPUT ${{inputs.build_category}}"
       shell: bash
     - run: bin/main.sh
       shell: bash
