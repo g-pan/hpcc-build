@@ -21,4 +21,7 @@ cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release -DMAKE_DOCS_ONLY=ON \
 
 make -j4
 
+tree ./docs
+tree ./Release
+
 
