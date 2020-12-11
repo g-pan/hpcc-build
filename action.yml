@@ -1,24 +1,8 @@
-name: 'Build HPCC Project'
-description: 'Build one of HPCC Project: platform, clienttools, docs and plugins'
-inputs:
-  platform_branch:
-    description: 'HPCC Platform branch or tag'
-    required: false
-  github_user:
-    description: 'github user'
-    required: true
-    default: 'hpcc-systems'
-  build_category:
-    description: 'One of HPCC Project: platform, clienttools, docs and plugins'
-    required: true
-    default: 'docs'
+name: 'Provision A Server'
+description: 'Provision a Build Server for HPCC Projects'
 
 runs:
   using: "composite"
   steps:
     - run: bin/main.sh
       shell: bash
-      env:
-        INPUT_BUILD_CATEGORY: ${{inputs.build_category}}
-        INPUT_GITHUB_USER: ${{inputs.github_user}}
-        INPUT_PLATFORM_BRANCH: ${{inputs.platform_branch}}

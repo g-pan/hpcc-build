@@ -12,9 +12,9 @@ ${ROOTDIR}/distros/${distro}.sh
 
 
 # Build
-if [ -n ${INPUT_BUILD_CATEGORY} ]
-then
-  echo "Build $INPUT_BUILD_CATEGORY ..."
-  pushd ${ROOTDIR}/builds/${INPUT_BUILD_CATEGORY}
-  ./build.sh
-fi 
+#if [ -n ${INPUT_BUILD_CATEGORY} ]
+#then
+#  echo "Build $INPUT_BUILD_CATEGORY ..."
+#  pushd ${ROOTDIR}/builds/${INPUT_BUILD_CATEGORY}
+#  ./build.sh
+#fi 

@@ -15,13 +15,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build
+      - name: Provision the build server
         uses: ./ 
+      - name: Checkout HPCC Platform
+        uses: actions/checkout@v2
         with:
-          build_category: docs
+          repository: hpcc-systems/HPCC-Platform
+          path: HPCC-Platform
+          ref: community_7.12.14-rc1
+          submodules: true
+      - name: cmake config
+        run: |
+          mkdir build && cd build && |
+          cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release |
+          -DMAKE_DOCS_ONLY=ON -DUSE_NATIVE_LIBRARIES=ON  -DDOCS_AUTO=ON |
+          -DDOC_LANGS=ALL ../HPCC-Platform
+      - name: build
+        run: make -j4
+      - name: prepare artifacts
+        run: |
+          mkdir /home/runner/output && |
+          cp ./docs/EN_US/HTMLHelp/*.zip /home/runner/output/ && |
+          cp ./docs/PT_BR/HTMLHelp/*.zip /home/runner/output/
       - name: upload-artifact
         uses: actions/upload-artifact@v2
         with:
-          name: html-help
+          name: html-help-7.12.12-rc1
           path: |
             /home/runner/output/*
