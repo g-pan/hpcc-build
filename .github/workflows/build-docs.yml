@@ -24,4 +24,4 @@ jobs:
         with:
           name: html-help
           path: |
-            /home/runner/work/hpcc-build/hpcc-build/build/docs/build/docs/EN_US/HTMLHelp/html_help_EN_US-7.13.0-trunk0.zip
+            /home/runner/ouptput/*
