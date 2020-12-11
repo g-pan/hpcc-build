@@ -22,11 +22,13 @@ cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release -DMAKE_DOCS_ONLY=ON \
 make -j4
 
 pwd
-ls -d
+echo "./docs/ ..."
+ls -d ./docs/
+echo "./docs/EN_US/HTMLHelp/ ..."
 ls ./docs/EN_US/HTMLHelp/
 ls ./docs/EN_US/HTMLHelp/*.zip
 
-[ -d /home/runner/output] && rm -rf /home/runner/output
+[ -d /home/runner/output ] && rm -rf /home/runner/output
 mkdir /home/runner/output
 
 cp ./docs/EN_US/HTMLHelp/htlm_help_EN_US*.zip /home/runner/output/
