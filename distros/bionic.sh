@@ -57,6 +57,7 @@ sudo apt-get install -y \
                  libsaxonb-java        \
                  libatlas-base-dev     \
                  libbsd-dev     \
+                 tree           \
                 --fix-missing     
 
 #libssl-dev            \

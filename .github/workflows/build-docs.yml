@@ -19,3 +19,9 @@ jobs:
         uses: ./ 
         with:
           build_category: docs
+      - name: upload-artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: html-help
+          path: |
+            
