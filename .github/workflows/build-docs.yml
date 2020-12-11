@@ -24,4 +24,4 @@ jobs:
         with:
           name: html-help
           path: |
-            /home/runner/ouptput/*
+            /home/runner/output/*
