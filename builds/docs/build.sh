@@ -22,8 +22,13 @@ cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Release -DMAKE_DOCS_ONLY=ON \
 make -j4
 
 pwd
-tree ./docs/EN_US/HTMLHelp
-tree ./docs/PT_BR/HTMLHelp
-tree ./Release
+
+[ -d /home/runner/output] && rm -rf /home/runner/output
+mkdir /home/runner/output
+
+cp ./docs/EN_US/HTMLHelp/htlm_help_EN_US*.zip /home/runner/output/
+cp ./docs/PT_BR/HTMLHelp/htlm_help_EN_US*.zip /home/runner/output/
+tree /home/runner/output
+
 
 
