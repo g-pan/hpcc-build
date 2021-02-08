@@ -22,7 +22,7 @@ jobs:
         with:
           repository: hpcc-systems/HPCC-Platform
           path: HPCC-Platform
-          ref: community_7.12.14-rc1
+          ref: community_7.12.24-1
           submodules: true
       - name: build
         run: |
@@ -37,6 +37,6 @@ jobs:
       - name: upload-artifact
         uses: actions/upload-artifact@v2
         with:
-          name: html-help-7.12.12-rc1
+          name: html-help-7.12.24-1
           path: |
             /home/runner/output/*
