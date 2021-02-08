@@ -20,7 +20,7 @@ jobs:
       - name: Checkout HPCC Platform
         uses: actions/checkout@v2
         with:
-          repository: hpcc-systems/HPCC-Platform
+          repository: g-pan/HPCC-Platform
           path: HPCC-Platform
           ref: community_7.12.24-1
           submodules: true
