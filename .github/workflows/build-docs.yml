@@ -22,7 +22,7 @@ jobs:
         with:
           repository: g-pan/HPCC-Platform
           path: HPCC-Platform
-          ref: community_7.12.24-1
+          ref: GADevTest1
           submodules: true
       - name: build
         run: |
